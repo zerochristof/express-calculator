@@ -2,7 +2,7 @@ pipeline {
 	agent{
 		docker { image 'node;14-apline' }
 	}
-}
+
 stages {
 	stage('Build'){
 		steps {
@@ -23,4 +23,5 @@ stages {
 		}
 	}
 
+}
 }
