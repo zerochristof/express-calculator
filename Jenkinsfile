@@ -1,10 +1,26 @@
 pipeline {
-agent any
+	agent{
+		docker { image 'node;14-apline' }
+	}
+}
 stages {
-stage('stage 1'){
+stage('Build'){
 steps {
-echo 'hello from pipeline SCM'
+echo ' Buildning'
+sh 'node --version'
 }
 }
-}
+stage('Test') {
+steps {
+ echo 'Testing' 
+ sh 'node --version'
+ }
+ }
+ stage('Deplot'){
+ steps {
+ echo 'Deploy'
+ sh 'node --version'
+ }
+ }
+ }
 }
