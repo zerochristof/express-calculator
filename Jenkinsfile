@@ -1,10 +1,3 @@
- stage('Initialize'){
-        def dockerHome = tool 'docker1'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
-
-
-
 
 pipeline {
 	agent{
@@ -24,7 +17,7 @@ stages {
 				sh 'node --version'
 		}
 	}
-	stage('Deplot'){
+	stage('Deploy'){
 		steps {
 			echo 'Deploy'
 				sh 'node --version'
