@@ -14,7 +14,7 @@ stages {
 	}
 	stage('Frontend') {
 		agent {
-			docker { image 'node:14-alpine' }
+			docker { dockerfile true }
 		}
 		steps {
 			echo 'Frontend' 
