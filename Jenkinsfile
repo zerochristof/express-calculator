@@ -17,7 +17,8 @@ stages {
 			docker { dockerfile true }
 		}
 		steps {
-			echo 'Frontend' 
+			echo 'Frontend'
+				sh 'svn --version'
 				sh 'node --version'
 		}
 	}
