@@ -14,7 +14,7 @@ stages {
 	}
 	stage('Frontend') {
 		agent {
-			docker { dockerfile true }
+			dockerfile true 
 		}
 		steps {
 			echo 'Frontend'
