@@ -12,7 +12,7 @@ pipeline {
 				steps {
 					sh 'npm run unit-test'
 				}
-				when {
+	   			when {
 				anyOf {
 				branch 'develop'
 				branch 'feature/*'
