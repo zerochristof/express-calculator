@@ -25,6 +25,7 @@ pipeline {
 				anyOf {
 				branch 'develop'
 				}
+				}
 				steps {
 					sh 'npm run integration-test'
 				}
