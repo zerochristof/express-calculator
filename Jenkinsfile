@@ -3,9 +3,9 @@ pipeline {
 	agent any
 
 		stages {
-			stage('build'){
-				steps {
-					sh 'npm install'
+			stage('buildd'){
+                    				steps {
+ 					sh 'npm install'
 				}
 			}
 			stage('unit-tests') {
@@ -29,6 +29,23 @@ pipeline {
 				steps {
 					sh 'npm run integration-test'
 				}
+				when {
+					anyOf {
+						branch 'develop'
+							branch 'feature/*'
+									 }
+									 }
+									 }
+									 stage('integration-tests') 
+									 {
+									 when {
+									 anyOf {
+									 branch 'develop'
+									 }
+									 }
+									 steps {
+									 sh 'npm run integration-test'
+									 }
 
 			}
 
