@@ -4,8 +4,8 @@ pipeline {
 
 		stages {
 			stage('build'){
-				steps {
-					sh 'npm install'
+                    				steps {
+ 					sh 'npm install'
 				}
 			}
 			stage('unit-tests') {
