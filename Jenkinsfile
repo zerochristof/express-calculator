@@ -13,22 +13,22 @@ pipeline {
 					sh 'npm run unit-test'
 				}
 				when {
-				anyOf {
-				branch 'develop'
-				branch 'feature/*'
-				}
-				}
-			}
-			stage('integration-tests') 
-				{
-				when {
-				anyOf {
-				branch 'develop'
-				}
-				}
-				steps {
-					sh 'npm run integration-test'
-				}
+					anyOf {
+						branch 'develop'
+							branch 'feature/*'
+									 }
+									 }
+									 }
+									 stage('integration-tests') 
+									 {
+									 when {
+									 anyOf {
+									 branch 'develop'
+									 }
+									 }
+									 steps {
+									 sh 'npm run integration-test'
+									 }
 
 			}
 
